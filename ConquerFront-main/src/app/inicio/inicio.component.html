@@ -1,0 +1,291 @@
+<div class="container-fluid" id="backcolor">
+
+  <div class="row d-flex align-items-center">
+    <div class="col-md-6">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 text-white">
+          <h3 class="fs-30 text-dark">Seja bem vindo!</h3>
+          <h5 class="fs-16 text-dark">Conquiste os lugares mais altos com os cursos conquer!</h5>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-3 mb-5">
+        <div class="col-md-6">
+          <button class="btn btn-dark mr-2" data-toggle="modal" data-target="#novaPostagem">Novo curso</button>
+          <a class="btn btn-dark" href="http://localhost:4200/#/cursos">Ver cursos</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-6 d-flex justify-content-center">
+      <img src="https://i.imgur.com/JqYCseh.png" alt="" width="500px" height="500px">
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--Menu dos Cursos-->
+<!-- <div class="container mb-5 mt-5" id="postagens">
+
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+      <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab"
+        href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todos os cursos</a>
+
+      <a (click)='findByIdUser()' class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab"
+        data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens"
+        aria-selected="false">Ver cursos</a>
+
+      <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab"
+        href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Cursos cadastrados</a>
+
+    </div>
+  </nav> -->
+<!--Final Menu dos Cursos-->
+
+
+
+
+<!--Mostra cursos cadastrados-->
+<!-- <div class="tab-content mt-5" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of listaPostagens'>
+          <div class="card-body">
+            <p class="card-title fs-20">{{item.curso}}</p>
+            <p class="card-text ">{{item.preco}}</p>
+            <p class="card-text">{{item.descricao}}</p>
+            <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+
+            <a [routerLink]="['/postagem-edit', item.id]" class="btn btn-success mr-3" href="">Editar</a>
+            <a [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder="Digite um curso para pesquisar"
+              [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+
+
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of user.postagem'>
+          <div class="card-body">
+            <p class="card-title fs-20">{{item.curso}}</p>
+            <p class="card-text ">{{item.preco}}</p>
+            <p class="card-text">{{item.descricao}}</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of user.postagem | orderBy : key : reverse'>
+          <div class="card-body">
+            <p class="card-title m-0">{{item.curso}}</p>
+            <small class="text-muted"> Categoria: {{item.categoria.tipo}}</small>
+            <p class="card-text mt-3">{{item.descricao}}</p>
+            <p class="card-text mt-3">Preço: R${{item.preco}}</p>
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder=""
+              [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-columns" *ngFor='let tema of listaTemas'>
+        <div class="card text-center" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.curso}}</h5>
+            <p class="card-text mt-3">{{item.descricao}}</p>
+
+
+
+            <p class="card-text"><small class="text-muted">
+                by: {{item.usuario.nome}}
+              </small></p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div> -->
+<!-- FIm Mostra cursos cadastrados-->
+
+<!-- Modal para cadastrar curso!!-->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Novo Curso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="curso">Curso</label>
+          <input [(ngModel)]='postagem.curso' type="text" class="form-control" id="curso" placeholder="Digite o Curso">
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Descrição</label>
+          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="descricao" id="descricao"
+            rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="preco">Foto</label>
+          <input [(ngModel)]='postagem.imagem' type="text" class="form-control" id="imagem" placeholder="imagem">
+        </div>
+
+        <div class="form-group">
+          <label for="preco">Preço</label>
+          <input [(ngModel)]='postagem.preco' type="text" class="form-control" id="preco" placeholder="Digite o Preço">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha uma categoria ou <a data-dismiss="modal" routerLink='/tema'>cadastre uma nova</a>:
+          </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">
+              {{item.tipo}}
+            </option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
+
+
+
+<!-- <div class="categoria pt-2 mt-2">
+  <div class="row d-flex justify-content-center mt-4 mb-5">
+      <div class="col-md-6">
+          <div class="form-group">
+              <input type="text" class="form-control" id="produto" placeholder="Digite o nome do Curso"
+                  [(ngModel)]='postagem.curso'>
+          </div>
+          <div class="form-group">
+              <textarea class="form-control" id="apresentacao" placeholder="Digite a descrição"
+              [(ngModel)]='postagem.descricao'> rows="3"></textarea>
+
+          </div>
+
+          <div class="form-group">
+
+            <input [(ngModel)]='postagem.preco' type="text" class="form-control" id="preco" placeholder="Digite o Preço">
+          </div>
+
+          <div class="form-group">
+              <input type="text" class="form-control" id="imagem" placeholder="Insira a imagem"
+                  [(ngModel)]='postagem.imagem'>
+          </div>
+      </div>
+
+      <select class="form-control" id="tema"[(ngModel)]='idTema'  (change)='findByIdTema()'>
+          <option>Selecione uma Categoria</option>
+          <option *ngFor='let item of listaTemas' value='{{item.id}}'>{{item.tipo}}</option>
+
+
+      </select>
+
+  </div>
+  <div class="d-flex justify-content-center">
+      <button class="btn btn-light" (click)='publicar()'>Publicar</button>
+  </div>
+
+</div> -->
+
+
+
+
+
+<!-- <div *ngFor='let item of listaPostagens' class="primeira-categoria">
+
+  <p class="titulo">{{item.curso}}</p>
+
+  <p>{{item.descricao}}</p>
+  <P>{{item.preco}}</P>
+  <img src="{{item.imagem}}" alt="" width="100%">
+  <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+  <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+
+  <hr>
+</div> -->
+
+
+<!--Mostra os produtos cadastrados-->
+<div class="" id="containerFundo">
+  <div class="row-wrap">
+    <div class="col-md-12 d-flex justify-content-center">
+      <div *ngFor='let item of listaPostagens' class="container-fluid d-flex justify-content-center card"
+        style="width: 30rem;">
+        <div>
+          <img class="card-img-top" src="{{item.imagem}}" alt="Imagem do curso" width="100%">
+        </div>
+
+        <!-- <div class="card-body">
+
+        </div> -->
+
+        <div>
+          <h3 class="card-text text-center">{{item.curso}}</h3>
+          <p class="card-text"><span class="ajuste">Descrição: </span><br>{{item.descricao}}</p>
+          <p class="card-text"><span class="ajuste">Preço:</span> <span class="preco">R${{item.preco}}</span></p>
+          <a [routerLink]="['/postagem-edit', item.id]" class=" btn btn-info mr 2" href="">Editar</a>
+          <a [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger " href="">Apagar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fim Mostra os produtos cadastrados-->

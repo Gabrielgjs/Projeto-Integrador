@@ -1,0 +1,31 @@
+<div class="container-fluid mt- mb- " id="backcolor">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center text-secondary">Atualizar Categoria</h1>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <input type="text" class="form-control" id="tipo" [(ngModel)]='tema.tipo'>
+        <label for="organizacao">Organização</label>
+        <input type="text" class="form-control" id="tipo" [(ngModel)]='tema.organizacao'>
+      </div>
+
+      <div class="d-flex justify-content-center mr">
+        <button class="btn mr-4 btn-danger" routerLink='/tema'>Cancelar</button>
+        <button class="btn btn-success" (click)='atualizar()'>Atualizar</button>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center ">
+      <img src="https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="imagem" width="80%" class="mr">
+    </div>
+  </div>
+
+</div>

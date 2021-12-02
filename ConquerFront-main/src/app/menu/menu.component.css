@@ -1,0 +1,67 @@
+.fs-16{
+  font-size: 16pt;
+}
+
+a{
+  cursor: pointer;
+}
+
+.color{
+  background: hsla(240, 4%, 95%, 1);
+
+  background: linear-gradient(180deg, hsla(240, 4%, 95%, 1) 0%, hsla(48, 100%, 70%, 0.8) 85%);
+
+  background: -moz-linear-gradient(180deg, hsla(240, 4%, 95%, 1) 0%, hsla(48, 100%, 70%, 0.8) 85%);
+
+  background: -webkit-linear-gradient(180deg, hsla(240, 4%, 95%, 1) 0%, hsla(48, 100%, 70%, 0.8) 85%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F3F3F4", endColorstr="#FFDF64", GradientType=1 );
+}
+
+.login {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 20px auto auto ;
+}
+
+.login a {
+  color: white;
+  text-decoration: none;
+}
+
+.login a:hover {
+  color:#65655E;
+}
+
+.fs-36{
+  font-size: 36pt;
+}
+
+.menu li a{
+ color: #1C1C1C; 
+ font-weight: bold;
+ font-style: italic;
+}
+
+.menu li a:hover{
+  color: #65655E;
+  padding-left: 10px;
+}
+
+.ajusteDrop{
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+#imgLogo{
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+}
+
+#centerLogin{
+    /* margin-bottom: 1rem; */
+    margin-top: 14px;
+}
